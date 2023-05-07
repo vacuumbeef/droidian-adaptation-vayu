@@ -1,5 +1,5 @@
 # Disclaimer
-I'm not a developer, I don't know much. Original adaptation is made by https://github.com/Verevka. I'm just trying to make additional fixes to make system work better.
+I'm not a developer, I don't know much. Original adaptation is made by https://github.com/Verevka, but instructions are somewhat confusing and the files are buried somewhere in telegram channel. I'm just trying to make more advanced guide and additional fixes to make system work better.
 
 # Installation
 
