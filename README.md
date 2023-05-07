@@ -2,8 +2,9 @@
 I'm not a developer, I don't know much. Original adaptation is made by https://github.com/Verevka, but instructions are somewhat confusing and the files are buried somewhere in telegram channel. I'm just trying to make more advanced guide and additional fixes to make system work better.
 
 # State
-Basically everything works, besides camera and apparently nfc.
+Basically everything works, besides camera, second SIM and apparently nfc.
 But camera works in waydroid, so we have a half-solution.
+And I have some progress with second SIM, but can't promise anything.
 
 # Installation
 
