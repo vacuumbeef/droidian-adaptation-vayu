@@ -13,9 +13,9 @@ https://github.com/vacuumbeef/droidian-adaptation-vayu/wiki
 1. Download adaptation and LineageOS rom from the latest release
 2. Download latest Droidian (rootfs-api30-arm64)
 3. Format data & Factory reset
-4. Flash (sideload) Lineage
-5. Flash (sideload) rootfs
-6. Flash (sideload) adaptation
+4. Flash LineageOS rom
+5. Flash rootfs
+6. Flash adaptation
 
 # Changes from original for now
 Added batman battery management, which changes cpu governor to 'powersave' when the screen is off.
