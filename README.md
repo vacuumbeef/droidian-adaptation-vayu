@@ -7,7 +7,7 @@ But camera works in waydroid, so we have a half-solution.
 
 # Installation
 
-It's better to read wiki formore details and post-installation hacks
+It's better to read wiki for more details and post-installation hacks
 https://github.com/vacuumbeef/droidian-adaptation-vayu/wiki
 
 1. Download adaptation and LineageOS rom from the latest release
