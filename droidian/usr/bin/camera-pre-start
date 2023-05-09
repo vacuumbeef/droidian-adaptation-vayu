@@ -1,0 +1,11 @@
+#!/bin/bash
+FILE=/tmp/cam-first-run
+if [ -f "$FILE" ]; then
+	pinhole
+else
+	touch $FILE
+	pinhole &
+	sleep 5
+	killall pinhole
+	pinhole
+fi

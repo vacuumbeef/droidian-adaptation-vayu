@@ -1,0 +1,8 @@
+# GPU accelerated flatpaks
+deb http://droidian-libhybris.repo.droidian.org/bullseye-flatpak/ bullseye main
+deb http://droidian-halium-wrappers.repo.droidian.org/bullseye-tls-padding-flatpak/ bullseye main
+
+# Useful/debugging repos for convenience
+deb http://droidian-stated.repo.droidian.org/bullseye-initial-implementation/ bullseye main
+deb http://droidian-libhybris.repo.droidian.org/bookworm-wayland-egl-displays/ bookworm main
+deb http://droidian-droidian-quirks.repo.droidian.org/bookworm-webkit-accel/ bookworm main

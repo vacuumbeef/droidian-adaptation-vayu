@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Camera
+Exec=camera-pre-start
+#Exec=pinhole
+Terminal=false
+Type=Application
+Categories=GTK;GNOME;AudioVideo;Video;Recorder;
+StartupNotify=true
+Icon=net.flyingpimonster.Camera
+Keywords=photo;video;webcam;camera;
+X-Purism-FormFactor=Workstation;Mobile;
