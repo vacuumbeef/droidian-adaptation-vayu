@@ -28,7 +28,14 @@ ui_print "Copying firmware images";
 mkdir /r/var/lib/lxc/android/firmware;
 cp -r firmware/* /r/var/lib/lxc/android/firmware/;
 chmod 755 /r/usr/local/sbin/mount-android-extra.sh;
+
+# Making user own files addid to it's home directory
+chroot /r /usr/bin/chown -R 32011:32011 /home/droidian/.local;
+chroot /r /usr/bin/chown -R 32011:32011 /home/droidian/.config;
+
+# Enabling systemd services
 chroot /r /usr/bin/systemctl enable android-mount-extra.service;
+chroot /r /usr/bin/systemctl enable batman.service;
 
 
 # Do "chmod a+c /etc/rc.local" for first boot
