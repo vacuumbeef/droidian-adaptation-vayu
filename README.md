@@ -1,10 +1,10 @@
 # Disclaimer
-I'm not a developer, I don't know much. Original adaptation is made by https://github.com/Verevka, but instructions are somewhat confusing and the files are buried somewhere in telegram channel. I'm just trying to make more advanced guide and additional fixes to make system work better.
+I'm not a developer, I don't know much. Original adaptation is made by https://github.com/Verevka, but instructions are somewhat confusing and the files are buried somewhere in telegram channel. I'm just trying to make more advanced guide and additional fixes and additions to make system work better.
 
 # State
-Basically everything works, besides camera, second SIM and apparently nfc.
-But camera works in waydroid, so we have a half-solution.
-And I have some progress with second SIM, but can't promise anything.
+Basically everything works, besides second SIM and apparently nfc.
+I have some progress with second SIM, but can't promise anything.
+Camera works, but on the second start after reboot. I've added a script that closes the camera after 5 seconds and opens it again, only on first start. It works by default, no additional actions by user needed.
 
 # Installation
 
@@ -17,10 +17,3 @@ https://github.com/vacuumbeef/droidian-adaptation-vayu/wiki
 4. Flash LineageOS rom
 5. Flash rootfs
 6. Flash adaptation
-
-# Changes from original for now
-Added batman battery management, which changes cpu governor to 'powersave' when the screen is off.
-
-Changed default scaling for better fit.
-
-Disabled various services unused in halium.
