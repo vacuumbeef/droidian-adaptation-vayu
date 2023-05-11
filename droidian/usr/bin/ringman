@@ -1,0 +1,67 @@
+#!/bin/bash
+
+export ringtonesdir=$HOME/.local/share/ringtones
+export ringtoneslist=$HOME/.cache/ring-cache
+ls -1 $ringtonesdir > $ringtoneslist
+export tmpfile=/tmp/ringman_tmp
+
+if [ ! -d "$HOME/.local/share/sounds/freedesktop/stereo" ]; then
+  mkdir -p $HOME/.local/share/sounds/freedesktop/stereo
+fi
+
+if [ ! -d "$ringtonesdir" ]; then
+  	mkdir -p $ringtonesdir
+fi
+
+if [[ -z "$(ls $ringtonesdir)" ]]; then
+        yad --title "Ringman" --text "Place audio files into ~/.local/share/ringtones and launch app again"
+	exit
+fi
+
+trap 'rm -f "$tmpfile" && killall ffplay' EXIT
+
+set_ringtone_func()
+{
+	notify-send -u normal -a Ringman "Setting ringtone" "Converting and setting up"
+	ffmpeg -y -i "$ringtonesdir/$(cat $tmpfile)" -c:a libvorbis $HOME/.local/share/sounds/freedesktop/stereo/phone-incoming-call.oga 
+	notify-send -u normal -a Ringman Done "Ringtone is set up"
+
+}
+
+write_selected_func()
+{
+	echo "$@" > /tmp/ringman_tmp
+	killall ffplay
+	ffplay -v 0 -nodisp -autoexit "$ringtonesdir/$@"
+}
+
+cmdmain=(
+yad
+	--text="Choose ringtone" 
+        --list 
+        --no-headers 
+	--borders=30 
+	--quoted-output 
+	--progress --enable-log --log-on-top --log-expanded
+	--buttons-layout=center 
+	--button="Stop playback:bash -c 'killall ffplay'" 
+	--button="Set ringtone:bash -c 'set_ringtone_func'" 
+	--select-action="bash -c \"write_selected_func %s\""
+	--separator='\n' 
+	--center --width=800 --height=600 --title "Ringman" 
+        --column=Name 
+)
+
+export -f set_ringtone_func
+export -f write_selected_func
+
+while true; do
+    cat $ringtoneslist | "${cmdmain[@]}"
+    exval=$?
+    case $exval in
+        1|252) break;;
+    esac
+done
+
+unset set_ringtone_func
+unset write_selected_func

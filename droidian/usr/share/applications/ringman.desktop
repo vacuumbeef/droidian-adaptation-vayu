@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Ringman
+GenericName=Ringtone Manager
+Comment=A graphical user interface to manage ringtones
+Icon=/usr/share/icons/ringman.png
+Exec=ringman
+Terminal=false
+Categories=System
+Keywords=sound;ringtone;music;set
