@@ -1,7 +1,7 @@
 # OUTDATED
 
-- **For Vayu-specific rootfs Droidian build - look [here](https://github.com/vacuumbeef/rootfs/releases) (it is the preffered way to install droidian)**
-- **For a new up-to-date adaptation - look [here](https://github.com/vacuumbeef/adaptation-droidian-vayu/releases) (if you need it for some reason)**
+- **For Vayu-specific rootfs Droidian build - look [here](https://github.com/droidian-vayu/droidian-images/releases) (it is the preffered way to install droidian)**
+- **For a new up-to-date adaptation - look [here](https://github.com/droidian-vayu/adaptation-droidian-vayu/releases) (if you need it for some reason)**
 
 # EVERYTHING BEHIND THIS LINE IS OBSOLETE
 ___
