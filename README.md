@@ -1,12 +1,19 @@
-# Disclaimer
-I'm not a developer, I don't know much. Original adaptation is made by https://github.com/Verevka, but instructions are somewhat confusing and the files are buried somewhere in telegram channel. I'm just trying to make more advanced guide and additional fixes and additions to make system work better.
+# OUTDATED
 
-# State
+- **For Vayu-specific rootfs Droidian build - look [here](https://github.com/vacuumbeef/rootfs/releases) (it is the preffered way to install droidian)**
+- **For a new up-to-date adaptation - look [here](https://github.com/vacuumbeef/adaptation-droidian-vayu/releases) (if you need it for some reason)**
+
+# EVERYTHING BEHIND THIS LINE IS OBSOLETE
+___
+## Disclaimer
+Original adaptation is made by https://github.com/Verevka, but instructions are somewhat confusing and the files are buried somewhere in telegram channel. I'm just trying to make more advanced guide and additional fixes and additions to make system work better.
+
+## State
 Basically everything works, besides second SIM and apparently nfc.
 I have some progress with second SIM, but can't promise anything.
 Camera works, but on the second start after reboot. I've added a script that closes the camera after 5 seconds and opens it again, only on first start. It works by default, no additional actions by user needed.
 
-# Installation
+## Installation
 
 It's better to read wiki for more details and post-installation hacks
 https://github.com/vacuumbeef/droidian-adaptation-vayu/wiki
